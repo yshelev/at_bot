@@ -7,10 +7,10 @@ from general.constants.variables import translator
 from general.errors import TranslationException
 
 
-def translate(text: str,
+async def translate(text: str,
               dest: str = "ru") -> str:
 	try:
-		return translator.translate(text, dest).text
+		return (await translator.translate(text, dest)).text
 	except ValueError:
 		raise TranslationException(TRANSLATION_ERROR_OUTPUT)
 

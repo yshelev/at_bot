@@ -1,6 +1,7 @@
 import asyncio
 import logging
 
+from chating.handlers import chatting_router
 from general.constants.variables import bot
 from aiogram import Dispatcher, types
 from aiogram.filters import Command
@@ -21,7 +22,8 @@ dp = Dispatcher()
 dp.include_routers(
     cat_fact_router,
     cat_picture_router,
-    gf_router
+    gf_router,
+    chatting_router,
 )
 
 

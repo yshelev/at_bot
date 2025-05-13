@@ -1,5 +1,6 @@
 from aiogram import Router, types
 from aiogram.filters import Command
+from aiogram.types import Message
 
 from general.constants.variables import bot
 from gf.constants.text import GF_ANS_TEXT

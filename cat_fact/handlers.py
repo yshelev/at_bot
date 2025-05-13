@@ -28,7 +28,7 @@ async def send_cat_fact(message: types.Message):
 
 
     try:
-        translated_fact = translate(fact)
+        translated_fact = await translate(fact)
     except TranslationException as e:
         handle_error(TRANSLATION_ERROR_OUTPUT,
                      message)
